@@ -1,0 +1,8 @@
+Samples里提供了如何编写DOS插件的例子，分别有c++，c#和ts三个版本
+例子里设计了SpaceArea，Shipyard，Ship三个对象：
+SpaceArea提供了空间环境，并管理Shipyard和Ship，该对象全局唯一
+Shipyard负责生成Ship对象，启动时会向SpaceArea注册自己
+Ship生成后会向SpaceArea注册自己，并查找一个目标，攻击目标，如果自己被攻击至HP为零，则自我销毁，并从SpaceArea注销
+
+三个版本的功能是一样的，只是ts受限于jsvm的限制，Shipyard及生成的Ship会在同一个线程运行
+缺省配置会同时加载三个版本的插件，但只有c++会创建SpaceArea对象

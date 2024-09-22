@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "sourceMap": true,
+    "sourceRoot": "./src",
+    "outDir": "./build",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true
+  },
+  "include": [ "./src/**/*"],
+  "exclude": [
+    "node_modules" // 排除 node_modules 目录
+  ]
+}

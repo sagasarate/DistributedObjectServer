@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{02e09b0f-7ca5-4bf4-8bca-7b001f46f27e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="预编译">
+      <UniqueIdentifier>{f69b0efa-895d-4496-a73f-f6bd59f9e32a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="插件主程序">
+      <UniqueIdentifier>{2569388b-1dd2-4e3d-b4db-eb5d4b743006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DOS对象">
+      <UniqueIdentifier>{67becb67-a880-4f41-ac8e-8e90bcacd9a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Protocol\DataObjectModifyFlags.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\DOSSampleDataStructs.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\DOSSampleInterfaces.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\DOSSampleSpaceShipEnums.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\DOSSampleSpaceShipStructs.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\DOSSampleSystemEnums.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\Protocol.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipAckInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipAckMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipAckMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipInfo.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardAckInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardAckMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardAckMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\ShipyardMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaAckInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaAckMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaAckMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaInterface.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaMsgCaller.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\SpaceAreaMsgHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>预编译</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>预编译</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceArea.h">
+      <Filter>DOS对象</Filter>
+    </ClInclude>
+    <ClInclude Include="Shipyard.h">
+      <Filter>DOS对象</Filter>
+    </ClInclude>
+    <ClInclude Include="Ship.h">
+      <Filter>DOS对象</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Protocol\DataObjectModifyFlags.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipAckMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipAckMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipInfo.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipyardAckMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipyardAckMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipyardMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\ShipyardMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\SpaceAreaAckMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\SpaceAreaAckMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\SpaceAreaMsgCaller.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\SpaceAreaMsgHandler.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>预编译</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginMain.cpp">
+      <Filter>插件主程序</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceArea.cpp">
+      <Filter>DOS对象</Filter>
+    </ClCompile>
+    <ClCompile Include="Shipyard.cpp">
+      <Filter>DOS对象</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>DOS对象</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+  </ItemGroup>
+</Project>

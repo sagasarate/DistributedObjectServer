@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Interfaces Version="2.0.0.0" Name="DOSSample" ModuleID="1" IDSeed="4">
+	<Imports/>
+	<GlobalDefine>
+		<Enums Name="SpaceShip" IgnoreOnExport="false">
+			<Enum Name="SHIP_TYPE" ShortName="TestEnum" ShowName="" Flag="0" Description="">
+				<Member Name="SMALL" Value="" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="MEDIUM" Value="" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="LARGE" Value="" Flag="0" StrValue="" Description="" BindDataType=""/>
+			</Enum>
+			<Enum Name="OBJECT_TYPES" ShortName="OBJECT_TYPES" ShowName="" Flag="0" Description="">
+				<Member Name="OBJECT_TYPE_SPACE_AREA" Value="0x11" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="OBJECT_TYPE_SHIPYARD" Value="0x12" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="OBJECT_TYPE_SHIP" Value="0x13" Flag="0" StrValue="" Description="" BindDataType=""/>
+			</Enum>
+			<Enum Name="MSG_RESULT" ShortName="MSG_RESULT" ShowName="" Flag="0" Description="">
+				<Member Name="MSR_SUCEED" Value="0" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="MSR_FAILED" Value="-2" Flag="0" StrValue="" Description="" BindDataType=""/>
+				<Member Name="MSR_NOT_EXIST" Value="1" Flag="0" StrValue="" Description="" BindDataType=""/>
+			</Enum>
+		</Enums>
+		<Structs Name="SpaceShip" IgnoreOnExport="false">
+			<Struct Name="POS" ShortName="TestStruct" ShowName="" BaseStruct="" Description="" IDSeed="5" Flag="0" ObjectID="0">
+				<GenerateOperations PackOperation="" UnpackOperation="" SizeCaculateOperation="" ToXMLOperation="" FromXMLOperation="" ToJsonOperation="" FromJsonOperation="" ReferenceDefine="" ReferenceUse="" VariableDefine="" InitOperation="" CloneOperation="" GetMethodDeclare="" GetMethodDefine="" SetMethodDeclare="" SetMethodDefine="" IndexOperation="" ConstIndexOperation="" ToStringOperation="" DBFieldDefineOperation="" DBInsertFormatOperation="" DBPutOperation="" DBGetOperation="" FileLogFillOperation="" AliLogSendOperation="" ToLuaOperation="" FromLuaOperation="" CreateXLSColumnOperation="" CheckXLSColumnOperation="" ToXLSOperation="" FromXLSOperation="" FormatSpecOperation=""/>
+				<Member Name="x" Type="int" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="1" BindData="" ExtendType=""/>
+				<Member Name="y" Type="int" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="2" BindData="" ExtendType=""/>
+			</Struct>
+			<Struct Name="ShipInfo" ShortName="SI" ShowName="" BaseStruct="" Description="" IDSeed="7" Flag="1" ObjectID="100">
+				<GenerateOperations PackOperation="" UnpackOperation="" SizeCaculateOperation="" ToXMLOperation="" FromXMLOperation="" ToJsonOperation="" FromJsonOperation="" ReferenceDefine="" ReferenceUse="" VariableDefine="" InitOperation="" CloneOperation="" GetMethodDeclare="" GetMethodDefine="" SetMethodDeclare="" SetMethodDefine="" IndexOperation="" ConstIndexOperation="" ToStringOperation="" DBFieldDefineOperation="" DBInsertFormatOperation="" DBPutOperation="" DBGetOperation="" FileLogFillOperation="" AliLogSendOperation="" ToLuaOperation="" FromLuaOperation="" CreateXLSColumnOperation="" CheckXLSColumnOperation="" ToXLSOperation="" FromXLSOperation="" FormatSpecOperation=""/>
+				<Member Name="ShipID" Type="OBJECT_ID" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="1" BindData="" ExtendType=""/>
+				<Member Name="ShipType" Type="SHIP_TYPE" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="6" BindData="" ExtendType=""/>
+				<Member Name="Name" Type="String" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="2" BindData="" ExtendType=""/>
+				<Member Name="Pos" Type="POS" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="3" BindData="" ExtendType=""/>
+				<Member Name="HP" Type="UINT" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="4" BindData="" ExtendType=""/>
+				<Member Name="Atk" Type="UINT" DBIndexType="0" Flag="0" IsArray="false" ArrayStartLength="0" ArrayGrowLength="8" DBLength="" ShowName="" Description="" PackFlag="" ID="5" BindData="" ExtendType=""/>
+			</Struct>
+		</Structs>
+		<DataObjectModifyFlags>
+			<ModifyFlag Name="DOMF_SHIP_INFO_FOR_REGISTER">
+				<Unit ClassName="ShipInfo">
+					<Flag Name="Name"/>
+					<Flag Name="Pos"/>
+					<Flag Name="HP"/>
+				</Unit>
+			</ModifyFlag>
+		</DataObjectModifyFlags>
+	</GlobalDefine>
+	<Interface Name="SpaceArea" ID="1" IDSeed="5" Description="">
+		<Method Name="RegisterShip" Type="0" ID="1" Flag="0" ParamIDSeed="5" Description="">
+			<CallParam Name="RegisterShipInfo" Type="ShipInfo" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag="DOMF_SHIP_INFO_FOR_REGISTER"/>
+			<AckParam Name="Result" Type="short" ID="3" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+		</Method>
+		<Method Name="UnregisterShip" Type="0" ID="2" Flag="0" ParamIDSeed="2" Description="">
+			<AckParam Name="Result" Type="short" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+		</Method>
+		<Method Name="FindShip" Type="0" ID="3" Flag="0" ParamIDSeed="3" Description="">
+			<AckParam Name="Result" Type="short" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+			<AckParam Name="ShipID" Type="OBJECT_ID" ID="2" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag="DOMF_SHIP_INFO_FULL"/>
+		</Method>
+		<Method Name="RegisterShipyard" Type="0" ID="4" Flag="0" ParamIDSeed="2" Description="">
+			<AckParam Name="Result" Type="short" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+		</Method>
+	</Interface>
+	<Interface Name="Ship" ID="2" IDSeed="2" Description="">
+		<Method Name="Attack" Type="2" ID="1" Flag="0" ParamIDSeed="4" Description="">
+			<CallParam Name="Damage" Type="int" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+			<AckParam Name="Result" Type="short" ID="2" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+			<AckParam Name="Damage" Type="int" ID="3" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+		</Method>
+	</Interface>
+	<Interface Name="Shipyard" ID="3" IDSeed="2" Description="">
+		<Method Name="CreateShip" Type="0" ID="1" Flag="0" ParamIDSeed="4" Description="">
+			<CallParam Name="ShipType" Type="SHIP_TYPE" ID="1" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+			<CallParam Name="ShipName" Type="String" ID="2" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+			<AckParam Name="Result" Type="short" ID="3" Length="0" CanNull="false" IsReference="false" IsArray="false" DefaultValue="" Description="" PackFlag=""/>
+		</Method>
+	</Interface>
+	<Prefix Content=""/>
+	<Postfix Content=""/>
+</Interfaces>

@@ -1,0 +1,27 @@
+{
+  "name": "JSSample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^22.5.0",
+    "eslint": "^9.9.0",
+    "gulp": "^5.0.0",
+    "gulp-bom": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "rollup": "^4.21.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+  }
+}

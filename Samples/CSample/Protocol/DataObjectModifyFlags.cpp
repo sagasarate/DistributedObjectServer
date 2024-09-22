@@ -1,0 +1,6 @@
+﻿#include "../pch.h"
+
+DATA_OBJECT_MODIFY_FLAGS DOMF_SHIP_INFO_FULL={
+		ShipInfo::MF_SHIP_ID|ShipInfo::MF_SHIP_TYPE|ShipInfo::MF_NAME|ShipInfo::MF_POS|ShipInfo::MF_HP|ShipInfo::MF_ATK};
+DATA_OBJECT_MODIFY_FLAGS DOMF_SHIP_INFO_FOR_REGISTER={
+		ShipInfo::MF_NAME|ShipInfo::MF_POS|ShipInfo::MF_HP};

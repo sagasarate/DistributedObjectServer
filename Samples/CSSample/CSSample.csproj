@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10E0BA03-C395-4951-9824-E1753F51347B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Work\</OutputPath>
+    <IntermediateOutputPath>bin/debug/obj</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Work\</OutputPath>
+    <IntermediateOutputPath>bin/release/obj</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Procotol\DataObjectModifyFlags.cs" />
+    <Compile Include="Procotol\DOSSampleSpaceShipEnums.cs" />
+    <Compile Include="Procotol\DOSSampleSpaceShipStructs.cs" />
+    <Compile Include="Procotol\DOSSampleSystemEnums.cs" />
+    <Compile Include="Procotol\ShipAckInterface.cs" />
+    <Compile Include="Procotol\ShipAckMsgCaller.cs" />
+    <Compile Include="Procotol\ShipAckMsgHandler.cs" />
+    <Compile Include="Procotol\ShipInfo.cs" />
+    <Compile Include="Procotol\ShipInterface.cs" />
+    <Compile Include="Procotol\ShipMsgCaller.cs" />
+    <Compile Include="Procotol\ShipMsgHandler.cs" />
+    <Compile Include="Procotol\ShipyardAckInterface.cs" />
+    <Compile Include="Procotol\ShipyardAckMsgCaller.cs" />
+    <Compile Include="Procotol\ShipyardAckMsgHandler.cs" />
+    <Compile Include="Procotol\ShipyardInterface.cs" />
+    <Compile Include="Procotol\ShipyardMsgCaller.cs" />
+    <Compile Include="Procotol\ShipyardMsgHandler.cs" />
+    <Compile Include="Procotol\SpaceAreaAckInterface.cs" />
+    <Compile Include="Procotol\SpaceAreaAckMsgCaller.cs" />
+    <Compile Include="Procotol\SpaceAreaAckMsgHandler.cs" />
+    <Compile Include="Procotol\SpaceAreaInterface.cs" />
+    <Compile Include="Procotol\SpaceAreaMsgCaller.cs" />
+    <Compile Include="Procotol\SpaceAreaMsgHandler.cs" />
+    <Compile Include="Ship.cs" />
+    <Compile Include="Shipyard.cs" />
+    <Compile Include="SpaceArea.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DOSSystem">
+      <HintPath>..\..\Work\Libs\DOSSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Work\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Work\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
